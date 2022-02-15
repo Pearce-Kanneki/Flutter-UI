@@ -1,6 +1,6 @@
 # flutter_ui
 
-A new Flutter project.
+參考flutter.dev裡的元件練習的專案
 
 ## Getting Started
 
