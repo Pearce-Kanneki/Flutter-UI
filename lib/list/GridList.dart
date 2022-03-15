@@ -1,0 +1,38 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(GridListApp());
+}
+
+class GridListApp extends StatefulWidget {
+  const GridListApp({Key? key}) : super(key: key);
+
+  @override
+  _GridListAppState createState() => _GridListAppState();
+}
+
+class _GridListAppState extends State<GridListApp> {
+  @override
+  Widget build(BuildContext context) {
+    const title = "Grid List";
+
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(title)),
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: List.generate(100, (index) {
+            return Center(
+              child: Text(
+                "Item $index",
+                style: Theme.of(context).textTheme.headline5,
+              ),
+            );
+          }),
+        ),
+      ),
+    );
+  }
+}
